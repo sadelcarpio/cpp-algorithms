@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
+#include "../cpp/functions.cpp"
 
 using namespace std;
 
 vector<int> selection_sort(vector<int>);
-vector<int> fill_arr(int);
 
 int main(int argc, char const *argv[])
 {
@@ -18,18 +18,6 @@ int main(int argc, char const *argv[])
         cout << '[' << elem << ']';
     }
     return 0;
-}
-
-vector<int> fill_arr(int n) 
-{
-    vector<int> arr;
-    for (int i = 0; i < n; i++)
-    {
-        int input;
-        cin >> input;
-        arr.push_back(input);
-    }
-    return arr;
 }
 
 vector<int> selection_sort(vector<int> arr) 

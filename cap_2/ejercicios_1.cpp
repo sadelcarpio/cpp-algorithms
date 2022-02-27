@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
+#include "../cpp/functions.cpp"
 
 using namespace std;
 
-vector<int> fill_arr(int);
 int searching_v(vector<int>, int);
 vector<int> binary_sum(vector<int>, vector<int>);
 
@@ -29,18 +29,6 @@ int main(int argc, char const *argv[])
     }
     
     return 0;
-}
-
-vector<int> fill_arr(int n) 
-{
-    vector<int> arr;
-    for (int i = 0; i < n; i++)
-    {
-        int input;
-        cin >> input;
-        arr.push_back(input);
-    }
-    return arr;
 }
 
 int searching_v(vector<int> arr, int v) 
