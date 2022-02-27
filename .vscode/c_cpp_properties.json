@@ -12,9 +12,9 @@
             ],
             "windowsSdkVersion": "10.0.19041.0",
             "compilerPath": "C:/MinGW/bin/g++.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "${default}"
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "windows-gcc-x86"
         }
     ],
     "version": 4

@@ -10,3 +10,10 @@ i se cumple antes de la primera iteración, se cumple para las siguientes
 ### Terminación
 La finalización del algoritmo implica que el algoritmo es correcto
 - Cuando j = n + 1, se tiene que  $A[1 ... n]$ debe estar ordenado
+
+# Notación $\Theta$
+Denota el orden de crecimiento del tiempo de ejecución de un algoritmo en función del tamaño de la entrada.
+
+- Para el insertion sort, en el peor de los casos (entrada en orden descendente):  
+  $$ T(n) = c_1n^2 + c_2n + c_3 $$
+  Entonces el tiempo de ejecución es $\Theta(n^2)$

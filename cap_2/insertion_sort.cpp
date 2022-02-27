@@ -65,5 +65,3 @@ vector<int> inverse_insertion_sort(vector<int> arr)
     }
     return arr;
 }
-
-
