@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "../cpp/functions.cpp"
+#include "../utils/utils.hpp"
 
 using namespace std;
 
@@ -13,13 +13,16 @@ int main(int argc, char const *argv[])
     cin >> n;
     arr = fill_arr(n);
     sorted_arr = selection_sort(arr);
-    for (auto &&elem : sorted_arr)
-    {
-        cout << '[' << elem << ']';
-    }
+    print_arr(sorted_arr);
     return 0;
 }
 
+/**
+ * @brief Ordena un arreglo de forma ascendente con selection sort
+ * 
+ * @param arr es el arreglo a ordenar
+ * @return el arreglo ordenado
+ */
 vector<int> selection_sort(vector<int> arr) 
 {
     for (int i = 0; i < arr.size() - 1; i++)

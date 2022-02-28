@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "../cpp/functions.cpp"
+#include "../utils/utils.hpp"
 
 using namespace std;
 
@@ -23,11 +23,7 @@ int main(int argc, char const *argv[])
     b = fill_arr(n2);
     vector<int> c = binary_sum(a, b);
     cout << "Solucion del segundo problema: " << endl;
-    for (int i = 0; i < c.size(); i++)
-    {
-        cout << '[' << c[i] << ']';
-    }
-    
+    print_arr(c);  
     return 0;
 }
 

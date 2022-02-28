@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "../cpp/functions.cpp"
+#include "../utils/utils.hpp"
 
 using namespace std;
 
@@ -14,14 +14,16 @@ int main(int argc, char const *argv[])
     cin >> n;
     arr = fill_arr(n);
     sorted_arr = inverse_insertion_sort(arr);
-    for (auto &&elem : sorted_arr)
-    {
-        cout << '[' << elem << ']';
-    }
-    
+    print_arr(sorted_arr);
     return 0;
 }
 
+/**
+ * @brief Ordena un arreglo de forma ascendente con insertion sort (izq. a der.)
+ * 
+ * @param arr es el arreglo a ordenar
+ * @return el arreglo ordenado
+ */
 vector<int> insertion_sort(vector<int> arr) 
 {
     for (int j = 1; j < arr.size(); j++)
@@ -38,6 +40,12 @@ vector<int> insertion_sort(vector<int> arr)
     return arr;
 }
 
+/**
+ * @brief Ordena un arreglo de forma ascendente con insertion sort (izq. a der.)
+ * 
+ * @param arr es el arreglo a ordenar
+ * @return el arreglo ordenado 
+ */
 vector<int> inverse_insertion_sort(vector<int> arr) 
 {
     for (int j = arr.size() - 2; j >= 0; j--)
