@@ -3,21 +3,21 @@
 #include <cmath>
 #include "../utils/utils.hpp"
 
-using namespace std;
-
-void merge(vector<int>&, int, int, int);
-void merge_sort(vector<int>&, int, int);
+void merge(vector<int> &arr, int p, int q, int r, int &counter);
+void merge_sort(vector<int> &arr, int p, int r, int &counter);
+int find_inversions(vector<int> arr);
 
 int main(int argc, char const *argv[])
 {
     int n;
     cin >> n;
     vector<int> arr = fill_arr(n);
+    int n_invs = find_inversions(arr);
     print_arr(arr);
-    merge_sort(arr, 0, arr.size() - 1); // se pasa el vector por referencia
-    print_arr(arr);
+    cout << n_invs << endl;
     return 0;
 }
+
 
 /**
  * @brief Realiza la comparación entre dos arreglos ordenados para unirlos en uno
@@ -27,18 +27,18 @@ int main(int argc, char const *argv[])
  * @param q es el índice que define la partición de los dos arreglos
  * @param r es índice superior en el arreglo original
  */
-void merge(vector<int> &arr, int p, int q, int r)
+void merge(vector<int> &arr, int p, int q, int r, int &counter)
 {
     int n1 = q - p + 1;
-    int n2 = r - q;
-    vector<int> L, R;
+    int n2 = r - q; 
+    vector<int> L(n1), R(n2);
     for (int i = 0; i < n1; i++)
     {
-        L.push_back(arr[p + i]);
+        L[i] = arr[p + i];
     }
     for (int j = 0; j < n2; j++)
     {
-        R.push_back(arr[q + j + 1]);
+        R[j] = arr[q + j + 1];
     }
     int i = 0, j = 0;
     for (int k = p; k < r + 1; k++)
@@ -51,6 +51,7 @@ void merge(vector<int> &arr, int p, int q, int r)
         else if (L[i] > R[j] && j < n2)
         {
             arr[k] = R[j];
+            counter += n1 - i;
             j++;
         }
         else if (j == n2)
@@ -63,23 +64,24 @@ void merge(vector<int> &arr, int p, int q, int r)
             arr[k] = R[j];
             j++;
         }
-    }   
+    }
+    
 }
 
-/**
- * @brief Implementa el ordenamiento de un arreglo con el método de merge sort
- * 
- * @param arr es el arreglo a ordenar, es modificado por el arreglo ordenado
- * @param p es el índice inicial (0)
- * @param r es el índice final (n)
- */
-void merge_sort(vector<int> &arr, int p, int r)
+void merge_sort(vector<int> &arr, int p, int r, int &counter)
 {
     if (p < r) // es necesario para cuando se llame merge_sort(arr, 0, 0)
     {
-        int q = floor((p + r) / 2);
-        merge_sort(arr, p, q);
-        merge_sort(arr, q + 1, r);
-        merge(arr, p, q, r);
+        int q = floor((float)(p + r) / 2);
+        merge_sort(arr, p, q, counter);
+        merge_sort(arr, q + 1, r, counter);
+        merge(arr, p, q, r, counter);
     }
+}
+
+int find_inversions(vector<int> arr)
+{
+    int counter = 0;
+    merge_sort(arr, 0, arr.size() - 1, counter);
+    return counter;
 }

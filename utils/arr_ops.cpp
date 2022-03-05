@@ -33,4 +33,5 @@ void print_arr(vector<int> arr)
     {
         cout << '[' << elem << ']';
     }
+    cout << "" << endl;
 }

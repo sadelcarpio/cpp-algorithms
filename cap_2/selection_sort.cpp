@@ -32,9 +32,10 @@ vector<int> selection_sort(vector<int> arr)
         {
             if (arr[j] < key)
             {
-                int temp = arr[j]; // swapping
-                arr[j] = key;
-                key = temp;
+                swap(arr[j], key); // built-in
+                // int temp = arr[j]; // swapping
+                // arr[j] = key;
+                // key = temp;
             }
         }
         arr[i] = key;

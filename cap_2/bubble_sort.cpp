@@ -24,9 +24,10 @@ vector<int> bubble_sort(vector<int> arr)
         {
             if (arr[j] < arr[j - 1])
             {
-                int temp = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = temp;
+                swap(arr[j], arr[j - 1]); // built-in
+                // int temp = arr[j];
+                // arr[j] = arr[j - 1];
+                // arr[j - 1] = temp;
             }
         }
     }
