@@ -55,3 +55,11 @@ $$
 $$
 
 Siendo $\Theta(n\cdot \log_2(n))$
+
+# Aclaración de notaciones $\Theta$, $O$ y $\Omega$
+
+$f(n) = \Theta(g(n))$, si $f(n)$ se encuentra acotado entre $c_1g(n)$ y $c_2g(n)$, a partir de cierto $n_0$
+
+$f(n) = O(g(n))$, si $f(n)$ está acotado superiormente por $cg(n)$, a partir de cierto $n_0$
+
+$f(n) = \Omega(g(n))$, si $f(n)$ está acotado inferiormente por $cg(n)$, a partir de cierto $n_0$
