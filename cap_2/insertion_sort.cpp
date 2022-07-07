@@ -7,10 +7,10 @@ using namespace std;
 vector<int> insertion_sort(vector<int>);
 vector<int> inverse_insertion_sort(vector<int>);
 
-int main(int argc, char const *argv[])
-{
-    int n;
-    vector<int> arr, sorted_arr; 
+int main()
+    {
+        int n;
+        vector<int> arr, sorted_arr;
     cin >> n;
     arr = fill_arr(n);
     sorted_arr = inverse_insertion_sort(arr);

@@ -6,7 +6,7 @@ using namespace std;
 
 vector<int> bubble_sort(vector<int>);
 
-int main(int argc, char const *argv[])
+int main()
 {
     int n;
     cin >> n;

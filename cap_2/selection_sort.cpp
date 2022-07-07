@@ -6,7 +6,7 @@ using namespace std;
 
 vector<int> selection_sort(vector<int>);
 
-int main(int argc, char const *argv[])
+int main()
 {
     int n;
     vector<int> arr, sorted_arr; 

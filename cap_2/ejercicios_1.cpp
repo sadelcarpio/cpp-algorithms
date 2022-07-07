@@ -7,7 +7,7 @@ using namespace std;
 int searching_v(vector<int>, int);
 vector<int> binary_sum(vector<int>, vector<int>);
 
-int main(int argc, char const *argv[])
+int main()
 {
     int v, n1;
     cin >> v;

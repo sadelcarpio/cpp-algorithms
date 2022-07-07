@@ -7,7 +7,7 @@ void merge(vector<int> &arr, int p, int q, int r, int &counter);
 void merge_sort(vector<int> &arr, int p, int r, int &counter);
 int find_inversions(vector<int> arr);
 
-int main(int argc, char const *argv[])
+int main()
 {
     int n;
     cin >> n;

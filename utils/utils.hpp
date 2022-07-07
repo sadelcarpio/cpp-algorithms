@@ -4,4 +4,17 @@
 using namespace std;
 
 vector<int> fill_arr(int);
-void print_arr(vector<int> arr); 
+/**
+ * @brief Imprime un arreglo
+ *
+ * @param arr es el arreglo a imprimir
+ */
+template <typename T>
+void print_arr(vector<T> &arr)
+{
+    for (T elem : arr)
+    {
+        cout << '[' << elem << ']';
+    }
+    cout << "" << endl;
+}

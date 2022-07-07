@@ -8,7 +8,7 @@ using namespace std;
 void merge(vector<int>&, int, int, int);
 void merge_sort(vector<int>&, int, int);
 
-int main(int argc, char const *argv[])
+int main()
 {
     int n;
     cin >> n;

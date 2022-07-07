@@ -21,17 +21,3 @@ vector<int> fill_arr(int n)
     }
     return arr;
 }
-
-/**
- * @brief Imprime un arreglo
- * 
- * @param arr es el arreglo a imprimir
- */
-void print_arr(vector<int> arr) 
-{
-    for (auto &&elem : arr)
-    {
-        cout << '[' << elem << ']';
-    }
-    cout << "" << endl;
-}
