@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
     for (int i = 0; i < a; i++)
     {
         std::cout << arr[i] << std::endl;
-    }  
+    }
     swapnum(a, b);
     std::cout << a << ',' << b << std::endl; // no cambia el valor real
     swapnum_ref(a, b);
@@ -35,7 +35,7 @@ void swapnum_ref(int &a, int &b) // Estamos hablando aquí de la ubicación de a
     b = temp;
 }
 
-void fill_array(int *arr, int n) // Pasar array por referencia
+void fill_array(int arr[], const int n) // Los arrays son siempre pasados por referencia!
 {
     for (int i = 0; i < n; i++)
     {

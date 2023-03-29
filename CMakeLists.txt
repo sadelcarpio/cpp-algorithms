@@ -1,5 +1,6 @@
 project(Algorithms)
 cmake_minimum_required(VERSION 3.22)
+set(CMAKE_EXE_LINKER_FLAGS "-static")
 FILE(GLOB_RECURSE sources "utils/*.cpp" "utils/*.hpp")
 add_executable(bubble_sort cap_2/bubble_sort.cpp ${sources})
 add_executable(insertion_sort cap_2/insertion_sort.cpp ${sources})

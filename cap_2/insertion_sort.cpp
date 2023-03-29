@@ -7,10 +7,9 @@ using namespace std;
 vector<int> insertion_sort(vector<int>);
 vector<int> inverse_insertion_sort(vector<int>);
 
-int main()
-    {
-        int n;
-        vector<int> arr, sorted_arr;
+int main() {
+    int n;
+    vector<int> arr, sorted_arr;
     cin >> n;
     arr = fill_arr(n);
     sorted_arr = inverse_insertion_sort(arr);
@@ -41,7 +40,7 @@ vector<int> insertion_sort(vector<int> arr)
 }
 
 /**
- * @brief Ordena un arreglo de forma ascendente con insertion sort (izq. a der.)
+ * @brief Ordena un arreglo de forma ascendente con insertion sort (der. a izq.)
  * 
  * @param arr es el arreglo a ordenar
  * @return el arreglo ordenado 
