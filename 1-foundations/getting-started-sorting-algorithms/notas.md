@@ -25,9 +25,10 @@ La finalización del algoritmo implica que el algoritmo es correcto
 Denota el orden de crecimiento del tiempo de ejecución de un algoritmo en función del tamaño de la entrada.
 
 - Para el insertion sort, en el peor de los casos (entrada en orden descendente):
-  $$
-  T(n) = c_1n^2 + c_2n + c_3
-  $$
+  
+```math
+T(n) = c_{1}n^{2} + c_{2}n + c_{3}
+```
 
   Entonces el tiempo de ejecución es $\Theta(n^2)$
 
@@ -74,15 +75,15 @@ Al terminal el loop, siendo `i = n - 1`, se tiene ordenado `A[1 ... n]`
 
 # Merge Sort
 
-Es un algoritmo de ordenamiento de tipo recursivo, divide el arreglo en dos, los ordena y luego une (merge) dos arreglos ordenados (complejidad $\Theta(n)$).
-<img src="https://cdn.programiz.com/cdn/farfuture/PRTu8e23Uz212XPrrzN_uqXkVZVY_E0Ta8GZp61-zvw/mtime:1586425911/sites/tutorial2program/files/merge-sort-example_0.png">
+Es un algoritmo de ordenamiento de tipo recursivo, divide el arreglo en dos, los ordena y luego une (merge) dos arreglos ordenados. Complejidad $\Theta(n)$.
+
+<img src="https://runestone.academy/ns/books/published/pythonds3/_images/mergesortB.png">
 
 La complejidad del algoritmo tiene la forma:
 
-$$
+```math
 T(n) = c\cdot n\cdot\log_2(n) + c\cdot n
-
-$$
+```
 
 Siendo $\Theta(n\cdot \log_2(n))$
 
