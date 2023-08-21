@@ -43,25 +43,15 @@ void merge(vector<int> &arr, int p, int q, int r, int &counter)
     int i = 0, j = 0;
     for (int k = p; k < r + 1; k++)
     {
-        if (L[i] <= R[j] && i < n1)
+        if (j == n2 || L[i] <= R[j] && i < n1)
         {
             arr[k] = L[i];
             i++;
         }
-        else if (L[i] > R[j] && j < n2)
+        else if (i == n1 || L[i] > R[j] && j < n2)
         {
             arr[k] = R[j];
             counter += n1 - i;
-            j++;
-        }
-        else if (j == n2)
-        {
-            arr[k] = L[i];
-            i++;
-        }
-        else if (i == n1)
-        {
-            arr[k] = R[j];
             j++;
         }
     }
